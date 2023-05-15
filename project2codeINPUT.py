@@ -21,13 +21,15 @@ def parameter_distribution():
 
 with open('simulated_data.txt', 'w') as file:
 # https://www.geeksforgeeks.org/writing-to-file-in-python/
-    # Scenario 1: parameter1 = 2.0, parameter2 = 1.0
-    for i in range(500):
+    # Scenario 1: parameter1 = 2.2, parameter2 = 2.3
+    for i in range(2000):
         parameter_value = parameter_distribution()
-        result = probability_distribution(2.0, 1.0, 1)
+        result = probability_distribution(2.2, 2.3, 1)
         file.write(str(result) + ',1\n')
-    # Scenario 2: parameter1 = 1.0, parameter2 = 2.0
-    for i in range(500):
+    # Scenario 2: parameter1 = 2.0, parameter2 = 3.5
+    for i in range(1000):
         parameter_value = parameter_distribution()
-        result = probability_distribution(1.0, 2.0, 2)
+        result = probability_distribution(2.0, 3.5, 2)
         file.write(str(result) + ',2\n')
+
+
